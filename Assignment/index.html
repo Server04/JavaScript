@@ -9,7 +9,9 @@
 	</head>
 	<body>
 		<div id="container">
-			<div id="flash-sale">Flash Sale 01:22:39</div>
+			<div id="flash-sale">
+				<div id="countdown"></div>
+			</div>
 			<hr />
 			<div id="box-product">
 				<div id="product">
@@ -20,7 +22,15 @@
 					/>
 					<div id="name">Laptop Asus TUF Gaming</div>
 					<div id="price">17.490.000₫</div>
-					<button id="buy">Mua</button>
+					<button id="buy" onclick="addProduct()">Mua</button>
+					<!-- <button
+						id="buy"
+						onclick="addProduct()"
+						data-product-name="Laptop Asus TUF Gaming"
+						data-product-price="17490000"
+					>
+						Mua
+					</button> -->
 				</div>
 				<div id="product">
 					<img
@@ -30,7 +40,7 @@
 					/>
 					<div id="name">Laptop HP Envy X360</div>
 					<div id="price">30.190.000₫</div>
-					<button id="buy">Mua</button>
+					<button id="buy" onclick="addProduct()">Mua</button>
 				</div>
 				<div id="product">
 					<img
@@ -40,7 +50,7 @@
 					/>
 					<div id="name">MacBook Pro 14 2023 M2 Pro</div>
 					<div id="price">62.990.000₫</div>
-					<button id="buy">Mua</button>
+					<button id="buy" onclick="addProduct()">Mua</button>
 				</div>
 			</div>
 			<hr />
@@ -54,36 +64,6 @@
 						<th>So Luong</th>
 						<th>Tong</th>
 						<th>Chinh sua</th>
-					</tr>
-					<tr>
-						<th><img src="IMG/1.png" width="100px" /></th>
-						<th>Laptop Asus TUF Gaming</th>
-						<th>17.490.000</th>
-						<th>1</th>
-						<th>17.490.000</th>
-						<th>
-							<button id="remove-product">Xoa</button>
-						</th>
-					</tr>
-					<tr>
-						<th><img src="IMG/2.png" width="100px" /></th>
-						<th>Laptop HP Envy X360</th>
-						<th>30.190.000</th>
-						<th>1</th>
-						<th>30.190.000</th>
-						<th>
-							<button id="remove-product">Xoa</button>
-						</th>
-					</tr>
-					<tr>
-						<th><img src="IMG/3.png" width="100px" /></th>
-						<th>MacBook Pro 14 2023 M2 Prog</th>
-						<th>17.490.000</th>
-						<th>1</th>
-						<th>62.990.000</th>
-						<th>
-							<button id="remove-product">Xoa</button>
-						</th>
 					</tr>
 				</table>
 			</div>
@@ -105,6 +85,8 @@
 					<input type="submit" id="submit" />
 				</form>
 			</div>
+			<footer>Nong Hoang Vu PH33506</footer>
 		</div>
+		<script src="Style/App/main.js"></script>
 	</body>
 </html>
