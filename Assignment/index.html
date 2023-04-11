@@ -22,15 +22,7 @@
 					/>
 					<div id="name">Laptop Asus TUF Gaming</div>
 					<div id="price">17.490.000₫</div>
-					<button id="buy" onclick="addProduct()">Mua</button>
-					<!-- <button
-						id="buy"
-						onclick="addProduct()"
-						data-product-name="Laptop Asus TUF Gaming"
-						data-product-price="17490000"
-					>
-						Mua
-					</button> -->
+					<button id="buy" onclick="addProduct(1)">Mua</button>
 				</div>
 				<div id="product">
 					<img
@@ -40,7 +32,7 @@
 					/>
 					<div id="name">Laptop HP Envy X360</div>
 					<div id="price">30.190.000₫</div>
-					<button id="buy" onclick="addProduct()">Mua</button>
+					<button id="buy" onclick="addProduct(2)">Mua</button>
 				</div>
 				<div id="product">
 					<img
@@ -50,7 +42,7 @@
 					/>
 					<div id="name">MacBook Pro 14 2023 M2 Pro</div>
 					<div id="price">62.990.000₫</div>
-					<button id="buy" onclick="addProduct()">Mua</button>
+					<button id="buy" onclick="addProduct(3)">Mua</button>
 				</div>
 			</div>
 			<hr />
@@ -58,34 +50,89 @@
 			<div id="title-order-x">
 				<table style="width: 100%">
 					<tr id="title-order">
-						<th></th>
+						<th>Pictures</th>
 						<th>Ten San Pham</th>
 						<th>Gia</th>
 						<th>So Luong</th>
 						<th>Tong</th>
 						<th>Chinh sua</th>
 					</tr>
+					<tr>
+						<th><img src="IMG/1.png" width="100px" /></th>
+						<th>Laptop Asus TUF Gaming</th>
+						<th>17.490.000</th>
+						<th><span id="quantity-1">0</span></th>
+						<th><span id="total-product-1">0 VND</span></th>
+						<th>
+							<button
+								id="remove-product-1"
+								class="remove-product"
+								onclick="removeProduct(1)"
+							>
+								Xoa
+							</button>
+						</th>
+					</tr>
+					<tr>
+						<th><img src="IMG/2.png" width="100px" /></th>
+						<th>Laptop HP Envy X360</th>
+						<th>30.190.000</th>
+						<th><span id="quantity-2">0</span></th>
+						<th><span id="total-product-2">0 VND</span></th>
+						<th>
+							<button
+								id="remove-product-2"
+								class="remove-product"
+								onclick="removeProduct(2)"
+							>
+								Xoa
+							</button>
+						</th>
+					</tr>
+					<tr>
+						<th><img src="IMG/3.png" width="100px" /></th>
+						<th>MacBook Pro 14 2023 M2 Prog</th>
+						<th>62.990.000</th>
+						<th><span id="quantity-3">0</span></th>
+						<th><span id="total-product-3">0 VND</span></th>
+						<th>
+							<button
+								id="remove-product-3"
+								class="remove-product"
+								onclick="removeProduct(3)"
+							>
+								Xoa
+							</button>
+						</th>
+					</tr>
 				</table>
 			</div>
 			<hr />
-			<div id="show-total">Tong tien: <span>1</span></div>
+			<div id="show-total">
+				Tong tien: <span id="total-money">0</span>
+			</div>
 			<hr />
 			<div id="client">
 				<h2>Thong Tin Khach Hang</h2>
-				<hr />
-				<form action="">
+				<form action="" id="customerForm">
+					<div id="error-name"></div>
 					<input
 						type="text"
 						name="fullName"
 						id="fullName"
-						placeholder="Ho va ten"
+						placeholder="Họ và tên"
 					/>
-					<input type="email" placeholder="Email" />
-					<input type="text" placeholder="So dien thoai" />
-					<input type="submit" id="submit" />
+					<div id="error-email"></div>
+					<input type="email" id="gmail" placeholder="Email" />
+					<div id="error-numberPhone"></div>
+					<input
+						type="tel"
+						id="numberPhone"
+						placeholder="Số điện thoại"
+					/>
+					<button type="submit" id="submit">Gui</button>
 				</form>
 			</div>
-			<footer>Nong Hoang Vu PH33506</footer>
 		</div>
 		<script src="Style/App/main.js"></script>
 	</body>
